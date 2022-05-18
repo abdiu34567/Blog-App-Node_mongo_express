@@ -2,12 +2,11 @@
 
 ## Used Contents
 
-> EJS Templating Engine
-> MongoDb
-> Express
-> Authentication with express session
-> WYSIWYG
-> EDITOR
+> EJS Templating Engine |
+> MongoDb |
+> Express |
+> Authentication with express session |
+> WYSIWYG Editor |
 > Deployed to Heroku
 
 ## DEMO
