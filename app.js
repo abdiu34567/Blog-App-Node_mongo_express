@@ -7,10 +7,8 @@ const app = express();
 
 const mongoose = require("mongoose");
 
-// mongodb+srv://Dawit:abdi@cluster0.ujgyp.mongodb.net/test
-
 mongoose.connect(
-  "mongodb+srv://Dawit:abdi@cluster0.ujgyp.mongodb.net/my_database",
+  process.env.MongoDB,
   {
     useNewUrlParser: true,
   }
