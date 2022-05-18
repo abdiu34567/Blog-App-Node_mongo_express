@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header'); -%>
+
+<body>
+  <%- include('layouts/navbar'); -%>
+  <!-- Page Header-->
+  <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="page-heading">
+            <h1>Register a new Account</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content-->
+  <main class="mb-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <p>
+            Want to get in touch? Fill out the form below to send me a message
+            and I will get back to you as soon as possible!
+          </p>
+          <div class="my-5">
+            <% if(errors != null && errors.length > 0){ %>
+            <ul class="list-group"></ul>
+            <% for (var i = 0; i < errors.length; i++) { %>
+            <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+            <% } %>
+            </ul>
+            <% } %>
+            <form action="/users/register" method="POST" id="contactForm">
+              <div class="form-floating">
+                <input class="form-control" id="username" name="username" type="text" placeholder="Enter User Name..." value="<%=
+                username %>" />
+                <label for="name">User Name</label>
+              </div>
+              <div class="form-floating">
+                <input class="form-control" id="password" type="password" name="password" placeholder="Enter your Password..." value="<%=
+                password %>" />
+                <label for="email">Password</label>
+              </div>
+
+              <br />
+
+              <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <%- include('layouts/footer'); -%>
+  <!--  -->
+  <%- include('layouts/scripts'); -%>
+</body>
+
+</html>
